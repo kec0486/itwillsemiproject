@@ -19,7 +19,8 @@
 	<div class ="footer">
 		<jsp:include page="footer.jsp" ></jsp:include>
 	</div>
-</div>
+	<h1>안녕하세요 !</h1>
+</div> 
 	
 	
 	
