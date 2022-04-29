@@ -20,6 +20,7 @@
 		<jsp:include page="footer.jsp" ></jsp:include>
 	</div>
 	<h1>안녕하세요 !</h1>
+	<h2>ㅎㅇㅎㅇ</h2>
 </div> 
 	
 	
