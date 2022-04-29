@@ -1,4 +1,4 @@
-package com.mystudy.controller;
+package com.mystudy.college.controller;
 
 import java.io.IOException;
 import java.util.List;
@@ -9,8 +9,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.mystudy.model.dao.EmployeeDAO;
-import com.mystudy.model.vo.EmployeeVO;
+import com.mystudy.college.model.dao.EmployeeDAO;
+import com.mystudy.college.model.vo.EmployeeVO;
 
 //@WebServlet("/controller")
 public class FrontController extends HttpServlet {

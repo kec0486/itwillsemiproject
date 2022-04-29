@@ -1,4 +1,4 @@
-package com.mystudy.model.vo;
+package com.mystudy.college.model.vo;
 
 public class EmployeeVO {
 	private String employee_id,	first_name,	last_name,	email,	phone_number,	

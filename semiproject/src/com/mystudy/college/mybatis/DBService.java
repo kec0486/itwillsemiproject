@@ -1,4 +1,4 @@
-package com.mystudy.mybatis;
+package com.mystudy.college.mybatis;
 
 import java.io.IOException;
 import java.io.Reader;

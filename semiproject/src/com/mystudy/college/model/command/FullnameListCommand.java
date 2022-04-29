@@ -1,4 +1,4 @@
-package com.mystudy.model.command;
+package com.mystudy.college.model.command;
 
 import java.io.IOException;
 import java.util.List;
@@ -7,8 +7,8 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.mystudy.model.dao.EmployeeDAO;
-import com.mystudy.model.vo.EmployeeVO;
+import com.mystudy.college.model.dao.EmployeeDAO;
+import com.mystudy.college.model.vo.EmployeeVO;
 
 public class FullnameListCommand implements Command {
 
