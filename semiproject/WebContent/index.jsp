@@ -6,12 +6,22 @@
 <meta charset="UTF-8">
 <title>메인페이지(로그인)</title>
 <style type="text/css">
-	.login {height: 10%;}
+	html {margin: 0;padding: 0;}
+	body {margin:0;padding: 0;
+			font-size: 12pt;
+			background-image: url("img/벚꽃.jpg");
+			/*height: 500px;*/ 
+			background-attachment: fixed;
+			background-repeat: no-repeat;
+			background-size: cover;
+			background-position: center;}
+	.login {height: 600px;}
 	.footer {}
 </style>
 </head>
 <body>
 <div class="index">
+	<div class="logo">a</div>
 	<div class ="login">
 		<jsp:include page="login.jsp"></jsp:include>
 	</div>
@@ -19,15 +29,6 @@
 	<div class ="footer">
 		<jsp:include page="footer.jsp" ></jsp:include>
 	</div>
-	<h1>안녕하세요 !</h1>
-	<h2>ㅎㅇㅎㅇ</h2>
-	<h1>선생님~!</h1>
-	<h2>아이스아메리카노~</h2>
 </div> 
-	
-	
-	
-	
-
 </body>
 </html>

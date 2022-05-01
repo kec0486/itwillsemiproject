@@ -24,7 +24,7 @@
   </environments>
   
   <mappers>
-    <mapper resource="com/mystudy/mybatis/mapper.xml"/>
+    <mapper resource="com/mystudy/college/mybatis/mapper.xml"/>
   </mappers>
   
 </configuration>

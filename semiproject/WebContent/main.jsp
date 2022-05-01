@@ -5,10 +5,19 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
+<style type="text/css">
+	.container {
+
+		height: 600px;
+}
+</style>
 </head>
 <body>
-	<span></span>
 	<aside><jsp:include page="aside.jsp"></jsp:include></aside>
-	<jsp:include page="footer.jsp" ></jsp:include>
+	<section>
+		<div class="container">
+			<h1>메인컨텐트영역</h1>
+		</div>
+	</section>
 </body>
 </html>
