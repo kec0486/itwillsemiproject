@@ -9,7 +9,7 @@ public class LectureVO {
 	private String l_name; //과목명
 	private String l_professor; //교수명
 	private int l_credit; //학점
-	private int c_id; //학사번호
+//	private int c_id; //학사번호
 	
 	public int getL_id() {
 		return l_id;
@@ -59,17 +59,12 @@ public class LectureVO {
 	public void setL_credit(int l_credit) {
 		this.l_credit = l_credit;
 	}
-	public int getC_id() {
-		return c_id;
-	}
-	public void setC_id(int c_id) {
-		this.c_id = c_id;
-	}
+	
 	@Override
 	public String toString() {
 		return "LectureVO [l_id=" + l_id + ", l_department=" + l_department + ", l_categorize=" + l_categorize
 				+ ", l_year=" + l_year + ", l_semester=" + l_semester + ", l_name=" + l_name + ", l_professor="
-				+ l_professor + ", l_credit=" + l_credit + ", c_id=" + c_id + "]";
+				+ l_professor + ", l_credit=" + l_credit  + "]";
 	}
 	
 	
