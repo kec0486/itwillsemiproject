@@ -1,4 +1,4 @@
-package com.mystudy.model.command;
+package com.mystudy.college.model.command;
 
 import java.io.IOException;
 

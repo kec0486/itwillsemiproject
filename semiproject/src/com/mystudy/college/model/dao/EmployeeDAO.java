@@ -1,4 +1,4 @@
-package com.mystudy.model.dao;
+package com.mystudy.college.model.dao;
 
 import java.util.HashMap;
 import java.util.List;
@@ -6,8 +6,8 @@ import java.util.Map;
 
 import org.apache.ibatis.session.SqlSession;
 
-import com.mystudy.model.vo.EmployeeVO;
-import com.mystudy.mybatis.DBService;
+import com.mystudy.college.model.vo.EmployeeVO;
+import com.mystudy.college.mybatis.DBService;
 
 public class EmployeeDAO {
 	

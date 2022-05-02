@@ -5,6 +5,7 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
+<link href="css/default.css" rel="stylesheet">
 </head>
 <body>
 	<h1>이곳은 서브페이지의 헤더입니다.</h1>

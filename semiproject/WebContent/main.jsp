@@ -5,10 +5,14 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
+<link href="css/default.css" rel="stylesheet">
 </head>
 <body>
-	<span></span>
 	<aside><jsp:include page="aside.jsp"></jsp:include></aside>
-	<jsp:include page="footer.jsp" ></jsp:include>
+	<section>
+		<div class="container">
+			<h1>메인컨텐트영역</h1>
+		</div>
+	</section>
 </body>
 </html>

@@ -4,29 +4,19 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>메인페이지(로그인)</title>
-<style type="text/css">
-	.login {height: 10%;}
-	.footer {}
-</style>
+<title>윌대학교 포털사이트</title>
+<link href="css/default.css" rel="stylesheet">
 </head>
 <body>
-<div class="index">
-	<div class ="login">
+<div class="main-index">
+	<div class="main-logo">a</div>
+	<div class ="main-login">
 		<jsp:include page="login.jsp"></jsp:include>
 	</div>
 	<hr>
-	<div class ="footer">
+	<div class ="main-footer">
 		<jsp:include page="footer.jsp" ></jsp:include>
 	</div>
-	<h1>안녕하세요 !</h1>
-	<h2>ㅎㅇㅎㅇ</h2>
-	<h1>선생님~!</h1>
 </div> 
-	
-	
-	
-	
-
 </body>
 </html>
