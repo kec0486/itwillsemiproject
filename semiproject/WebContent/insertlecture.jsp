@@ -70,5 +70,7 @@
 					</tr>
 				</tfoot>
 			</table>
+		</form>
+	</div>
 </body>
 </html>

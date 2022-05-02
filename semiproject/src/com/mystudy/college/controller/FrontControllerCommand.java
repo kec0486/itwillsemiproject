@@ -9,7 +9,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-
+import com.mystudy.college.model.command.C_InsertCommand;
 import com.mystudy.college.model.command.Command;
 import com.mystudy.college.model.command.FullnameCommand;
 import com.mystudy.college.model.command.FullnameListCommand;
@@ -27,15 +27,16 @@ public class FrontControllerCommand extends HttpServlet{
 		
 		Command command = null;
 		
-		if ("list".equals(type)) {
-			command = new ListCommand();
-		}else if("fullname".equals(type)) {
-			command = new FullnameCommand();
-		}else if("fullnameList".equals(type)) {
-			command = new FullnameListCommand();
-		}else if("search".equals(type)) {
-			command = new SearchCommand();
+		if ("c_insert".equals(type)) {
+			command = new C_InsertCommand();
 		}
+//		else if("fullname".equals(type)) {
+//			command = new FullnameCommand();
+//		}else if("fullnameList".equals(type)) {
+//			command = new FullnameListCommand();
+//		}else if("search".equals(type)) {
+//			command = new SearchCommand();
+//		}
 		String path = command.exec(request, response);
 		request.getRequestDispatcher(path).forward(request, response);
 	}
