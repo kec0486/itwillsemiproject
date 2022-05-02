@@ -12,7 +12,7 @@ public class DBService {
 	static {
 		try {
 			factory = new SqlSessionFactoryBuilder()
-					.build(Resources.getResourceAsReader("com/mystudy/college/mybatis.config.xml"));
+					.build(Resources.getResourceAsReader("com/mystudy/college/mybatis/config.xml"));
 		} catch (IOException e) {
 			e.printStackTrace();
 		}

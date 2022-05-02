@@ -10,44 +10,33 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.mystudy.college.model.dao.EmployeeDAO;
+import com.mystudy.college.model.dao.LectureDAO;
 import com.mystudy.college.model.vo.EmployeeVO;
+import com.mystudy.college.model.vo.LectureVO;
 
 
-//@WebServlet("/controller")
+@WebServlet("/lecture_insert_ok")
 public class FrontController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		System.out.println(">> FrontController.doGet() 실행~~");
-		String type = request.getParameter("type");
+		int id = Integer.parseInt(request.getParameter("id"));
+		String department = request.getParameter("department");
+		String categorize = request.getParameter("categorize");
+		String year = request.getParameter("year");
+		String semester = request.getParameter("semester");
+		String name = request.getParameter("name");
+		String professor = request.getParameter("professor");
+		int credit = Integer.parseInt(request.getParameter("credit"));
+		System.out.println(id+  department+  categorize+ year+ semester+ name+ professor+ credit);
 		
-		if ("list".equals(type)) {
-			//1. DB연결하고 전체 데이터 가져오기
-			List<EmployeeVO> list = EmployeeDAO.getList();
-			//2. 응답페이지(list.jsp)에 데이터 전달
-			request.setAttribute("list", list);
-			//3. 응답페이지(list.jsp)로 화면 이동(전환)
-			request.getRequestDispatcher("list.jsp").forward(request, response);
-		}else if ("fullname".equals(type)) {
-			//fullname.jsp 페이지로 응답처리
-			request.getRequestDispatcher("fullname.jsp").forward(request, response);
-		}else if ("fullnameList".equals(type)) {
-			//0. 파라미터 값 추출(확인)
-			String fullname = request.getParameter("fullname");
-			
+		LectureVO vo = new LectureVO(id, department, categorize, year, semester, name, professor, credit);
 			//1. DB데이터 조회하고 가져오기
-			List<EmployeeVO> list = EmployeeDAO.fullnameList(fullname);
-			//2. DB데이터 request scope 에 저장
-			request.setAttribute("list", list);
-			//3. fullnameList.jsp 페이지로 위임(전달) 처리
-			request.getRequestDispatcher("fullnameList.jsp").forward(request, response);
+			  LectureDAO.Insert_Lecture(vo);
+			
+			request.getRequestDispatcher("lecture_list.jsp").forward(request, response);
 		}
 	}
 
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		System.out.println(">> FrontController.doPost() 실행~~");
-		request.setCharacterEncoding("UTF-8");
-		doGet(request, response);
-	}
 
-}
+

@@ -4,7 +4,7 @@
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="college">
 
-
+	
 	<!-- 
 	전체 직원 목록 조회
 	<select id="list" resultType="EmployeeVO">
@@ -39,6 +39,15 @@
 			</if>
 		</where>
 	</select> -->
+	
+	
+	
+	<!-- 수강(수업) 등록  -->
+	<insert id="lectureInsert" parameterType="com.mystudy.college.model.vo.LectureVO">
+	INSERT INTO LECTURE 
+	(L_ID, L_DEPARTMENT, L_CATEGORIZE, L_YEAR, L_SEMESTER, L_NAME, L_PROFESSOR, L_CREDIT )
+	VALUES (#{l_id }, #{l_department }, #{l_categorize }, #{l_year }, #{l_semester }, #{l_name }, #{l_professor }, #{l_credit })
+	</insert>
 </mapper>
 
 

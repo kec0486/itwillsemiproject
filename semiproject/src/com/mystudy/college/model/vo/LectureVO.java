@@ -14,6 +14,18 @@ public class LectureVO {
 	public int getL_id() {
 		return l_id;
 	}
+	public LectureVO(int l_id, String l_department, String l_categorize, String l_year, String l_semester,
+			String l_name, String l_professor, int l_credit) {
+		super();
+		this.l_id = l_id;
+		this.l_department = l_department;
+		this.l_categorize = l_categorize;
+		this.l_year = l_year;
+		this.l_semester = l_semester;
+		this.l_name = l_name;
+		this.l_professor = l_professor;
+		this.l_credit = l_credit;
+	}
 	public void setL_id(int l_id) {
 		this.l_id = l_id;
 	}
