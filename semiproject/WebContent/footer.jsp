@@ -4,32 +4,13 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<<<<<<< HEAD
-<title>Insert title here</title>
 <link href="css/default.css" rel="stylesheet">
-=======
 <title>푸터</title>
-<style>
-@import url('https://fonts.googleapis.com/css2?family=East+Sea+Dokdo&display=swap');
- .foot  {
- 	font-size : 30px;
- 	font-family: 'East Sea Dokdo', cursive;	
- }
- 
- footer {
- 	background-color: white;
- 	text-align : center;
- }
- 
 
-</style>
->>>>>>> branch 'master' of https://github.com/kec0486/itwillsemiproject.git
 </head>
 <body>
-<<<<<<< HEAD
 	<h1>이곳은 푸터입니다</h1>
 	<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-=======
 	<footer>
 	<div class="foot">
 	<br>
@@ -44,6 +25,5 @@
 	 	
 	</p>
 	</footer>
->>>>>>> branch 'master' of https://github.com/kec0486/itwillsemiproject.git
 </body>
 </html>
