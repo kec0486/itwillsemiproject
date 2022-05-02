@@ -88,7 +88,10 @@
 			</table>
 		</form>
 	</div>
+<<<<<<< HEAD
 	
 			
+=======
+>>>>>>> branch 'master' of https://github.com/kec0486/itwillsemiproject.git
 </body>
 </html>

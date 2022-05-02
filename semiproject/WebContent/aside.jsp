@@ -7,6 +7,11 @@
 <meta charset="UTF-8">
 <title></title>
 <link href="css/default.css" rel="stylesheet">
+<script type="text/javascript">
+	function c_insert() {
+		location.href = "controller?type=c_insert";
+	}
+</script>
 </head>
 <body>
 	<div class="manu-bar">
@@ -16,9 +21,9 @@
 			<ul class="manu">
 				<li>회원정보
 					<ul>
-						<li>회원등록</li>
-						<li>회원정보조회</li>
-						<li>회원정보수정</li>
+						<li onclick="c_insert()">회원등록</li>
+						<li onclick="c_select()">회원정보조회</li>
+						<li onclick="c_update()">회원정보수정</li>
 					</ul>
 				</li>		
 				<li>수업정보
