@@ -4,29 +4,17 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>메인페이지(로그인)</title>
-<style type="text/css">
-	html {margin: 0;padding: 0;}
-	body {margin:0;padding: 0;
-			font-size: 12pt;
-			background-image: url("img/벚꽃.jpg");
-			/*height: 500px;*/ 
-			background-attachment: fixed;
-			background-repeat: no-repeat;
-			background-size: cover;
-			background-position: center;}
-	.login {height: 600px;}
-	.footer {}
-</style>
+<title>윌대학교 포털사이트</title>
+<link href="css/default.css" rel="stylesheet">
 </head>
 <body>
-<div class="index">
-	<div class="logo">a</div>
-	<div class ="login">
+<div class="main-index">
+	<div class="main-logo">a</div>
+	<div class ="main-login">
 		<jsp:include page="login.jsp"></jsp:include>
 	</div>
 	<hr>
-	<div class ="footer">
+	<div class ="main-footer">
 		<jsp:include page="footer.jsp" ></jsp:include>
 	</div>
 </div> 

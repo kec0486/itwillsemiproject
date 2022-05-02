@@ -5,12 +5,7 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
-<style type="text/css">
-	.container {
-
-		height: 600px;
-}
-</style>
+<link href="css/default.css" rel="stylesheet">
 </head>
 <body>
 	<aside><jsp:include page="aside.jsp"></jsp:include></aside>
