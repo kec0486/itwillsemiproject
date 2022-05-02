@@ -7,14 +7,15 @@ import java.util.Map;
 import org.apache.ibatis.session.SqlSession;
 
 import com.mystudy.college.model.vo.EmployeeVO;
+import com.mystudy.college.model.vo.LectureVO;
 import com.mystudy.college.mybatis.DBService;
 
 public class EmployeeDAO {
 	
-	//전체 직원 목록 조회
+	// 개인강의 시간표 조회 
 	public static List<EmployeeVO> getList() {
 		SqlSession ss = DBService.getFactory().openSession();
-		List<EmployeeVO> list = ss.selectList("hr.list");
+		List<EmployeeVO> list = ss.selectList("college.selectLecture");
 		ss.close();
 		return list;
 	}

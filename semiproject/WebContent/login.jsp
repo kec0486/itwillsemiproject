@@ -4,6 +4,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
+<<<<<<< HEAD
 <title>Insert title here</title>
 <link href="css/default.css" rel="stylesheet">
 <script>
@@ -16,6 +17,29 @@ function openCity(cityName) {
   document.getElementById(cityName).style.display = "block";  
 }
 </script>
+=======
+<title>login.jsp</title>
+<style type="text/css">
+	.login {padding-top: 200px;
+			padding-left: 150px;
+			}
+	.loginmain {float: left;
+				border: 1px solid white;
+				text-align: center;}
+	.main-notice {border: 1px solid white;
+				border-left: 50px;
+				left: 300px;}	
+	.notice {position: relative;float: left;
+			list-style: none;margin:0;padding: 0;
+			}
+	.tab {display: inline-block;}
+	.main-table {}
+	.login-btn {background-color: gray;
+				margin:5px 10px;
+				 width: 150px;
+				 height: 40px;}
+</style>
+>>>>>>> branch 'master' of https://github.com/kec0486/itwillsemiproject.git
 </head>
 <body>
 	<div class="login">
