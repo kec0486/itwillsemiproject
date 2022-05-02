@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>login.jsp</title>
 <style type="text/css">
 	.login {padding-top: 200px;
 			padding-left: 150px;

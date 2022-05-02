@@ -7,6 +7,7 @@
 <title>Insert title here</title>
 </head>
 <body>
+
 	<h1>이곳은 서브페이지의 헤더입니다.</h1>
 </body>
 </html>
