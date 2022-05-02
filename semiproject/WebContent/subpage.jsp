@@ -17,10 +17,8 @@
 	<div class="logout"><a href="index.jsp">로그아웃</a></div>
 	<nav class="nav"><h1 class="nav-header">학사관리시스템</h1></nav>
 	<div class="header">
-		
 	</div>
 	<jsp:include page="main.jsp"></jsp:include>
-	<hr>
 	<jsp:include page="footer.jsp" ></jsp:include>
 </body>
 </html>

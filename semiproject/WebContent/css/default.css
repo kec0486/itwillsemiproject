@@ -108,3 +108,13 @@ body {
 .logout {
 	text-align: right;
 }
+@import url('https://fonts.googleapis.com/css2?family=East+Sea+Dokdo&display=swap');
+ .foot  {
+ 	font-size : 30px;
+ 	font-family: 'East Sea Dokdo', cursive;	
+ }
+ 
+.footer-main {
+ 	background-color: white;
+ 	text-align : center;
+ }

@@ -13,7 +13,6 @@
 	<div class ="main-login">
 		<jsp:include page="login.jsp"></jsp:include>
 	</div>
-	<hr>
 	<div class ="main-footer">
 		<jsp:include page="footer.jsp" ></jsp:include>
 	</div>
