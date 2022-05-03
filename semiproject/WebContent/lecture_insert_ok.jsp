@@ -7,6 +7,10 @@
 <title>Insert title here</title>
 </head>
 <body>
+<h1> lecture_insert_ok 
+	- 유효성 검사 
 
+
+</h1>
 </body>
 </html>

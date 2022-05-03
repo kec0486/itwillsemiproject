@@ -13,6 +13,7 @@ import com.mystudy.college.model.command.C_InsertCommand;
 import com.mystudy.college.model.command.Command;
 import com.mystudy.college.model.command.FullnameCommand;
 import com.mystudy.college.model.command.FullnameListCommand;
+import com.mystudy.college.model.command.LecturInsertCommand;
 import com.mystudy.college.model.command.ListCommand;
 import com.mystudy.college.model.command.SearchCommand;
 
@@ -27,9 +28,9 @@ public class FrontControllerCommand extends HttpServlet{
 		
 		Command command = null;
 		
-		if ("c_insert".equals(type)) {
-			command = new C_InsertCommand();
-		}
+//		if ("insert".equals(type)) { //수강과목 등록 
+//			command = new LecturInsertCommand();
+////		}
 //		else if("fullname".equals(type)) {
 //			command = new FullnameCommand();
 //		}else if("fullnameList".equals(type)) {

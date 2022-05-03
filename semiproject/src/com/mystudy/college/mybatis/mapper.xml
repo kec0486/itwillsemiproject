@@ -3,10 +3,8 @@
   PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="college">
-<<<<<<< HEAD
 
 	
-=======
 	<insert id="insert" parameterType="com.mystudy.college.model.vo.CustomerVO">
 		INSERT INTO
 		CUSTOMER
@@ -66,6 +64,12 @@
 	INSERT INTO LECTURE 
 	(L_ID, L_DEPARTMENT, L_CATEGORIZE, L_YEAR, L_SEMESTER, L_NAME, L_PROFESSOR, L_CREDIT )
 	VALUES (#{l_id }, #{l_department }, #{l_categorize }, #{l_year }, #{l_semester }, #{l_name }, #{l_professor }, #{l_credit })
+	</insert>
+	
+	<insert id="timeInsert" parameterType="com.mystudy.college.model.vo.TimeVO">
+	INSERT INTO TIME
+	(T_ID, T_DAY, T_TIME )
+	VALUES (#{t_id }, #{t_day },#{t_time })
 	</insert>
 </mapper>
 
