@@ -1,13 +1,13 @@
 package com.mystudy.college.model.vo;
 
-public class ResistrationVO {
+public class RegistrationVO {
 	private int sub_code; //과목코드 
 	private String re_grade; // 성적 
 	private String re_term; // 학기 
 	private int st_id; //학번 
 	private int re_score; //점수 
 	
-	public ResistrationVO(int sub_code, String re_grade, String re_term, int st_id, int re_score) {
+	public RegistrationVO(int sub_code, String re_grade, String re_term, int st_id, int re_score) {
 		super();
 		this.sub_code = sub_code;
 		this.re_grade = re_grade;
