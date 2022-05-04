@@ -4,63 +4,76 @@
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="college">
 
-	
-	<insert id="insert" parameterType="com.mystudy.college.model.vo.CustomerVO">
-		INSERT INTO
-		CUSTOMER
-		VALUES(#{C_ID }
-				#{C_PASSWORD }
-				#{C_NAME }
-				#{C_RRN }
-				#{C_ACOUNT }
-				#{C_AUTHORITY }
-				#{C_GENDER }
-				#{C_CALLNUMBER }
-				#{C_PHONE }
-				#{C_EMAIL }
-				#{M_ADDRESS })
-	</insert>
+	<!-- <insert id="insert" parameterType="com.mystudy.college.model.vo.CustomerVO"> 
+		INSERT INTO CUSTOMER VALUES(#{C_ID } #{C_PASSWORD } #{C_NAME } #{C_RRN } 
+		#{C_ACOUNT } #{C_AUTHORITY } #{C_GENDER } #{C_CALLNUMBER } #{C_PHONE } #{C_EMAIL 
+		} #{M_ADDRESS }) </insert> 전체 직원 목록 조회 <select id="list" resultType="EmployeeVO"> 
+		SELECT * FROM EMPLOYEES ORDER BY EMPLOYEE_ID </select> 이름으로 검색(조회) <select 
+		id="fullnameList" parameterType="string" resultType="EmployeeVO"> SELECT 
+		* FROM EMPLOYEES WHERE FIRST_NAME = INITCAP(#{fullname}) OR LAST_NAME = INITCAP(#{fullname}) 
+		ORDER BY EMPLOYEE_ID </select> 동적검색 <select id="search" parameterType="map" 
+		resultType="EmployeeVO"> SELECT * FROM EMPLOYEES <where> <if test="idx == 
+		0"> EMPLOYEE_ID = #{keyword} </if> <if test="idx == 1"> FIRST_NAME = INITCAP(#{keyword}) 
+		OR LAST_NAME = INITCAP(#{keyword}) </if> <if test="idx == 2"> JOB_ID = INITCAP(#{keyword}) 
+		</if> <if test="idx == 3"> DEPARTMENT_ID = #{keyword} </if> </where> </select> -->
 
-	<!-- 
-	전체 직원 목록 조회
-	<select id="list" resultType="EmployeeVO">
-		SELECT * FROM EMPLOYEES ORDER BY EMPLOYEE_ID
+	<!-- 교수님 개인정보 관리 -->
+	<select id="professorSelect" parameterType="int"
+		resultType="com.mystudy.college.model.vo.ProfessorVO">
+		SELECT PRO_ID, PRO_PWD, PRO_NAME, PRO_SSN, PRO_POSITION,
+		PRO_OFFICE, PRO_MOBILE, PRO_PHONE, PRO_EMAIL, PRO_ADDR, MA_CODE
+		FROM
+		PROFESSOR
+		WHERE PRO_ID = #{pro_id }
 	</select>
-	
-	이름으로 검색(조회)
-	<select id="fullnameList" parameterType="string" resultType="EmployeeVO">
-		SELECT *
-		FROM EMPLOYEES
-		WHERE FIRST_NAME = INITCAP(#{fullname})
-		OR LAST_NAME = INITCAP(#{fullname})
-		ORDER BY EMPLOYEE_ID
+
+	<update id="professorUpdate"
+		parameterType="com.mystudy.college.model.vo.ProfessorVO">
+		UPDATE
+		PROFESSOR
+		SET PRO_PWD = #{pro_pwd },
+		PRO_PHONE = #{pro_phone },
+		PRO_ADDR = #{pro_addr },
+		PRO_OFFICE= #{pro_office },
+		PRO_MOBILE= #{pro_mobile },
+		PRO_EMAIL=#{pro_email }
+		WHERE PRO_ID = #{pro_id }
+	</update>
+
+	<!-- 교수님 나의 강의 정보 조회 -->
+
+<!--  
+	<resultMap type="com.mystudy.college.model.vo.SubjectVO" id="SubjectVO">
+		<result property="sub_code" column="sub_code" />
+		<result property="sub_name" column="sub_name" />
+		<result property="sub_level" column="sub_level" />
+		<result property="sub_credit" column="sub_credit" />
+		<result property="sub_day" column="sub_day" />
+		<result property="sub_time" column="sub_time" />
+		<result property="sub_class" column="sub_class" />
+
+	</resultMap>
+
+	<resultMap type="com.mystudy.college.model.vo.LectureVO" id="LectureVO">
+		<result property="pro_id" column="pro_id" />
+		<result property="sub_code" column="sub_code" />
+		<collection property="subjectVO" resultMap="LectureVO" />
+		
+	</resultMap>
+-->
+	<select id="LectureSelect" parameterType="int" resultMap="LectureVO">
+			SELECT  L.PRO_ID,
+       		 		L.SUB_CODE,
+       				S.SUB_NAME,
+       			 	S.SUB_LEVEL,
+       			 	S.SUB_CREDIT,
+       			 	S.SUB_DAY,
+        			S.SUB_TIME,
+       			 	S.SUB_CLASS
+			FROM SUBJECT S JOIN LECTURE L
+			ON S.SUB_CODE = L.SUB_CODE
+			WHERE L.PRO_ID = #{pro_id }
 	</select>
-	
-	동적검색
-	<select id="search" parameterType="map" resultType="EmployeeVO">
-		SELECT *
-		FROM EMPLOYEES
-		<where>
-			<if test="idx == 0">
-				EMPLOYEE_ID = #{keyword}
-			</if>
-			<if test="idx == 1">
-				FIRST_NAME = INITCAP(#{keyword}) OR LAST_NAME = INITCAP(#{keyword})
-			</if>
-			<if test="idx == 2">
-				JOB_ID = INITCAP(#{keyword})
-			</if>
-			<if test="idx == 3">
-				DEPARTMENT_ID = #{keyword}
-			</if>
-		</where>
-	</select> -->
-	
-	
-	
-	<!-- 교수정보 조회  -->
-	
-	
 </mapper>
 
 

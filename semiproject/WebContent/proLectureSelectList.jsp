@@ -7,10 +7,8 @@
 <title>Insert title here</title>
 </head>
 <body>
-<h1> lecture_insert_ok 
-	- 유효성 검사 
-
-
-</h1>
+	<h1> 교수  강의 목록 </h1>
+	
+	${list }
 </body>
 </html>
