@@ -11,8 +11,11 @@ import javax.servlet.http.HttpServletResponse;
 
 import com.mystudy.college.model.command.Command;
 import com.mystudy.college.model.command.ProSelectCommand;
+import com.mystudy.college.model.command.ProStuRegiSelectListCommand;
 import com.mystudy.college.model.command.ProUpdateCommand;
 import com.mystudy.college.model.command.lectureSelectCommand;
+import com.mystudy.college.model.command.proRegiInsertOkCommand;
+import com.mystudy.college.model.command.proRegiUpdateOkCommand;
 import com.mystudy.college.model.command.proUpdateListCommand;
 import com.mystudy.college.model.command.professorSelectListCommand;
 import com.mystudy.college.model.command.prolectureSelectListCommand;
@@ -40,7 +43,14 @@ public class FrontControllerCommand extends HttpServlet {
 			command = new lectureSelectCommand();
 		} else if ("prolectureSelectList".equals(type)) { //교수 개인정보 수정 확인 요청
 			command = new prolectureSelectListCommand();
+		} else if ("ProStuRegiSelectList".equals(type)) { //교수 강의과목 리스트 조회
+			command = new ProStuRegiSelectListCommand();
+		} else if ("proRegiInsert_ok".equals(type)) { //교수 강의과목 학생정보 입력
+			command = new proRegiInsertOkCommand();
+		} else if ("proRegiUpdate_ok".equals(type)) { //교수 강의과목 학생정보 수정
+			command = new proRegiUpdateOkCommand();
 		}
+		
 		
 		String path = command.exec(request, response);
 		request.getRequestDispatcher(path).forward(request, response);

@@ -42,26 +42,7 @@
 
 	<!-- 교수님 나의 강의 정보 조회 -->
 
-<!--  
-	<resultMap type="com.mystudy.college.model.vo.SubjectVO" id="SubjectVO">
-		<result property="sub_code" column="sub_code" />
-		<result property="sub_name" column="sub_name" />
-		<result property="sub_level" column="sub_level" />
-		<result property="sub_credit" column="sub_credit" />
-		<result property="sub_day" column="sub_day" />
-		<result property="sub_time" column="sub_time" />
-		<result property="sub_class" column="sub_class" />
-
-	</resultMap>
-
-	<resultMap type="com.mystudy.college.model.vo.LectureVO" id="LectureVO">
-		<result property="pro_id" column="pro_id" />
-		<result property="sub_code" column="sub_code" />
-		<collection property="subjectVO" resultMap="LectureVO" />
-		
-	</resultMap>
--->
-	<select id="LectureSelect" parameterType="int" resultMap="LectureVO">
+	<select id="LectureSelect" parameterType="int" resultType="com.mystudy.college.model.vo.LecSubjectVO">
 			SELECT  L.PRO_ID,
        		 		L.SUB_CODE,
        				S.SUB_NAME,
@@ -74,6 +55,32 @@
 			ON S.SUB_CODE = L.SUB_CODE
 			WHERE L.PRO_ID = #{pro_id }
 	</select>
+	
+	<!-- 교수 학생성적 관리  -->
+	<!-- 자신의 강의 학생 리스트  -->
+	<select id="LectureStudentList" parameterType="int" resultType="com.mystudy.college.model.vo.StuRegiVO">
+		SELECT ST.*,  RE.*
+		FROM STUDENT ST, REGISTRATION RE
+		where ST.ST_ID = RE.ST_ID
+			and re.sub_code = #{sub_code }
+	</select>
+	
+	<!-- 학생 성적 입력  -->
+	<insert id="proRegiInsert" parameterType="com.mystudy.college.model.vo.RegistrationVO">
+		INSERT INTO REGISTRATION(RE_TERM, RE_SCORE, RE_GRADE,RE_SCORE,ST_ID) 
+		VALUES (#{re_term }, #{re_score }, #{re_grade }, #{re_score }, #{st_id })
+	</insert>
+	
+	<!-- 학생성적 수정  -->
+	<update id="proRegiUpdate" parameterType="com.mystudy.college.model.vo.RegistrationVO">
+		UPDATE REGISTRATION 
+   				SET
+   					RE_SCORE = #{re_score }, 
+        			RE_GRADE = #{re_grade }
+		WHERE ST_ID = #{st_id }
+			AND SUB_CODE = #{sub_code }
+	
+	</update>
 </mapper>
 
 

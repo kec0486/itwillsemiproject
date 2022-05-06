@@ -17,7 +17,6 @@
 <body>
 	<h1>교수님 아이디 조회 목록 [professorSelectList.jsp]</h1>
 	
-	
 		<table border = "1" >
 			<thead>
      			 <tr>
