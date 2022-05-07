@@ -16,7 +16,8 @@ public class professorSelectListCommand implements Command {
 
 	@Override
 	public String exec(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
+		//교수 개인정보조회 
+		// 파라미터 받은 것 가져오기 
 		int selectId = Integer.parseInt(request.getParameter("selectId"));
 
 		// 1. DB데이터 조회하고 가져오기

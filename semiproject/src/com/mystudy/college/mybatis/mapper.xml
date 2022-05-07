@@ -61,7 +61,7 @@
 		
 	</resultMap>
 -->
-	<select id="LectureSelect" parameterType="int" resultMap="LectureVO">
+	<select id="LectureSelect" parameterType="int" resultType="com.mystudy.college.model.vo.LecSubjectVO">
 			SELECT  L.PRO_ID,
        		 		L.SUB_CODE,
        				S.SUB_NAME,
@@ -74,6 +74,7 @@
 			ON S.SUB_CODE = L.SUB_CODE
 			WHERE L.PRO_ID = #{pro_id }
 	</select>
+
 </mapper>
 
 
