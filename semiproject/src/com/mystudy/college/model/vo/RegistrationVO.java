@@ -16,6 +16,14 @@ public class RegistrationVO {
 		this.st_id = st_id;
 	}
 
+	public RegistrationVO(int re_score, String re_grade, int sub_code, int st_id) {
+		super();
+		this.re_score = re_score;
+		this.re_grade = re_grade;
+		this.sub_code = sub_code;
+		this.st_id = st_id;
+	}
+
 	public String getRe_term() {
 		return re_term;
 	}

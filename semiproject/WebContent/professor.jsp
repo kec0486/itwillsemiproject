@@ -25,6 +25,7 @@
 		<button onclick="pro_select()">개인정보 조회</button>
 		<button onclick="pro_update()">개인정보 수정</button>
 		<button onclick="lec_select()">강의정보 조회 </button>
+		
 
     
 </body>

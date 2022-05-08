@@ -1,6 +1,6 @@
 package com.mystudy.college.model.vo;
 
-public class StudentVO {
+public class StuRegiVO {
 	private int st_id; // 학번 
 	private String st_pwd; //학생 비밀번호 
 	private String st_name; //이름
@@ -11,9 +11,14 @@ public class StudentVO {
 	private String st_email; //이메일 
 	private String st_addr; //집주소 
 	private int ma_code; //학과코드 
+	private String re_term; // 학기 
+	private int re_score; //점수 
+	private String re_grade; // 성적 
+	private int sub_code; //과목코드 
 	
-	public StudentVO(int st_id, String st_pwd, String st_name, String st_ssn, int st_level, String st_mobile,
-			String st_phone, String st_email, String st_addr, int ma_code) {
+	public StuRegiVO(int st_id, String st_pwd, String st_name, String st_ssn, int st_level, String st_mobile,
+			String st_phone, String st_email, String st_addr, int ma_code, String re_term, int re_score,
+			String re_grade, int sub_code) {
 		super();
 		this.st_id = st_id;
 		this.st_pwd = st_pwd;
@@ -25,16 +30,10 @@ public class StudentVO {
 		this.st_email = st_email;
 		this.st_addr = st_addr;
 		this.ma_code = ma_code;
-	}
-
-	public StudentVO(String pwd, String phone, String mobile, String email, String addr,int st_id) {
-		this.st_pwd = st_pwd;
-		this.st_phone = st_phone;
-		this.st_mobile = st_mobile;
-		this.st_email = st_email;
-		this.st_addr = st_addr;
-		this.st_id = st_id;
-
+		this.re_term = re_term;
+		this.re_score = re_score;
+		this.re_grade = re_grade;
+		this.sub_code = sub_code;
 	}
 
 	public int getSt_id() {
@@ -117,16 +116,45 @@ public class StudentVO {
 		this.ma_code = ma_code;
 	}
 
+	public String getRe_term() {
+		return re_term;
+	}
+
+	public void setRe_term(String re_term) {
+		this.re_term = re_term;
+	}
+
+	public int getRe_score() {
+		return re_score;
+	}
+
+	public void setRe_score(int re_score) {
+		this.re_score = re_score;
+	}
+
+	public String getRe_grade() {
+		return re_grade;
+	}
+
+	public void setRe_grade(String re_grade) {
+		this.re_grade = re_grade;
+	}
+
+	public int getSub_code() {
+		return sub_code;
+	}
+
+	public void setSub_code(int sub_code) {
+		this.sub_code = sub_code;
+	}
+
 	@Override
 	public String toString() {
-		return "StudentVO [st_id=" + st_id + ", st_pwd=" + st_pwd + ", st_name=" + st_name + ", st_ssn=" + st_ssn
+		return "StuRegiVO [st_id=" + st_id + ", st_pwd=" + st_pwd + ", st_name=" + st_name + ", st_ssn=" + st_ssn
 				+ ", st_level=" + st_level + ", st_mobile=" + st_mobile + ", st_phone=" + st_phone + ", st_email="
-				+ st_email + ", st_addr=" + st_addr + ", ma_code=" + ma_code + "]";
+				+ st_email + ", st_addr=" + st_addr + ", ma_code=" + ma_code + ", re_term=" + re_term + ", re_score="
+				+ re_score + ", re_grade=" + re_grade + ", sub_code=" + sub_code + "]";
 	}
-	
-	
-	
-	
 	
 	
 	

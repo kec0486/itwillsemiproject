@@ -4,18 +4,6 @@
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="college">
 
-	<!-- <insert id="insert" parameterType="com.mystudy.college.model.vo.CustomerVO"> 
-		INSERT INTO CUSTOMER VALUES(#{C_ID } #{C_PASSWORD } #{C_NAME } #{C_RRN } 
-		#{C_ACOUNT } #{C_AUTHORITY } #{C_GENDER } #{C_CALLNUMBER } #{C_PHONE } #{C_EMAIL 
-		} #{M_ADDRESS }) </insert> 전체 직원 목록 조회 <select id="list" resultType="EmployeeVO"> 
-		SELECT * FROM EMPLOYEES ORDER BY EMPLOYEE_ID </select> 이름으로 검색(조회) <select 
-		id="fullnameList" parameterType="string" resultType="EmployeeVO"> SELECT 
-		* FROM EMPLOYEES WHERE FIRST_NAME = INITCAP(#{fullname}) OR LAST_NAME = INITCAP(#{fullname}) 
-		ORDER BY EMPLOYEE_ID </select> 동적검색 <select id="search" parameterType="map" 
-		resultType="EmployeeVO"> SELECT * FROM EMPLOYEES <where> <if test="idx == 
-		0"> EMPLOYEE_ID = #{keyword} </if> <if test="idx == 1"> FIRST_NAME = INITCAP(#{keyword}) 
-		OR LAST_NAME = INITCAP(#{keyword}) </if> <if test="idx == 2"> JOB_ID = INITCAP(#{keyword}) 
-		</if> <if test="idx == 3"> DEPARTMENT_ID = #{keyword} </if> </where> </select> -->
 
 	<!-- 교수님 개인정보 관리 -->
 	<select id="professorSelect" parameterType="int"
@@ -74,7 +62,32 @@
 			ON S.SUB_CODE = L.SUB_CODE
 			WHERE L.PRO_ID = #{pro_id }
 	</select>
-
+	
+	<!-- 교수 학생성적 관리  -->
+	<!-- 자신의 강의 학생 리스트  -->
+	<select id="LectureStudentList" parameterType="int" resultType="com.mystudy.college.model.vo.StuRegiVO">
+		SELECT ST.*,  RE.*
+		FROM STUDENT ST, REGISTRATION RE
+		where ST.ST_ID = RE.ST_ID
+			and re.sub_code = #{sub_code }
+	</select>
+	
+	<!-- 학생 성적 입력  -->
+	<insert id="proRegiInsert" parameterType="com.mystudy.college.model.vo.RegistrationVO">
+		INSERT INTO REGISTRATION(RE_TERM, RE_SCORE, RE_GRADE,RE_SCORE,ST_ID) 
+		VALUES (#{re_term }, #{re_score }, #{re_grade }, #{re_score }, #{st_id })
+	</insert>
+	
+	<!-- 학생성적 수정  -->
+	<update id="proRegiUpdate" parameterType="com.mystudy.college.model.vo.RegistrationVO">
+		UPDATE REGISTRATION 
+   				SET
+   					RE_SCORE = #{re_score }, 
+        			RE_GRADE = #{re_grade }
+		WHERE ST_ID = #{st_id }
+			AND SUB_CODE = #{sub_code }
+	
+	</update>
 </mapper>
 
 

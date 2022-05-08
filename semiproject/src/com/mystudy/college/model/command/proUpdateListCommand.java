@@ -33,7 +33,8 @@ public class proUpdateListCommand implements Command {
 		System.out.println(pvo); // 값이 잘 들어오는지 확인 
 		// 1. DB데이터 조회하고 가져오기
 		int list =  ProfessorDAO.proUpdate(pvo);
-
+		
+		System.out.println(list);
 //		// 2. DB데이터 request scope 에 저장
 		request.setAttribute("list", list);
 //		
