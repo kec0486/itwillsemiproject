@@ -30,10 +30,9 @@
 	<select id="stuRegiAll" parameterType="int"
 		resultType="com.mystudy.college.model.vo.RegiSubVO">
 
-		SELECT RE.*, SU.*
+		SELECT RE.RE_TERM, RE.RE_SCORE, RE.RE_GRADE, SU.SUB_NAME, SU.SUB_CODE
 		FROM REGISTRATION RE JOIN SUBJECT SU
-		ON
-		RE.SUB_CODE = SU.SUB_CODE
+			ON RE.SUB_CODE = SU.SUB_CODE
 		WHERE RE.ST_ID = #{st_id }
 		ORDER BY RE.SUB_CODE, RE.RE_TERM
 

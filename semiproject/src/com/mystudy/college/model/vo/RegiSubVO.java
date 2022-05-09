@@ -7,7 +7,7 @@ public class RegiSubVO {
 	private int sub_code; //과목코드 
 	private int st_id; //학번 
 	
-	private String sub_name; //강목명 
+	private String sub_name; //과목명 
 	private int sub_level; // 학년 
 	private int sub_credit; //학점 
 	private String sub_day; //강의 요일 

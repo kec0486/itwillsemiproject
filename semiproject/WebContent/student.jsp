@@ -24,6 +24,7 @@
 	<h1>학생 페이지 </h1>
 		<button onclick="stu_select()">개인정보 조회</button>
 		<button onclick="stu_update()">개인정보 수정</button>
+		
 		<button onclick="stu_check()">성적확인하기</button>
 		
 

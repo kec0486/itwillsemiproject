@@ -13,12 +13,10 @@
 	<table border="1">
 		<thead>
 			<tr>
-				<th>학년</th>
 				<th>학기</th>
-				<th>과목 이름</th>
-				<th>학점</th>
 				<th>점수</th>
 				<th>성적</th>
+				<th>과목 이름</th>
 				<th>과목코드</th>
 			</tr>
 		</thead>
@@ -28,10 +26,8 @@
 					<td>${vo.re_term }</td>
 					<td>${vo.re_score }</td>
 					<td>${vo.re_grade }</td>
-					<td>${vo.sub_code }</td>
 					<td>${vo.sub_name }</td>
-					<td>${vo.sub_level }</td>
-					<td>${vo.sub_credit }</td>
+					<td>${vo.sub_code }</td>
 				</tr>
 			</c:forEach>
 		</tbody>
